@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💪 Computer Repair Shop
 
-## Getting Started
+> A full-stack web app for managing customers and repair tickets
 
-First, run the development server:
+![Dashboard Preview](https://placehold.co/1200x600/222/fff?text=Computer+Repair+Shop+Dashboard)
+
+---
+
+## 📅 Overview
+
+This application helps computer repair shops to:
+
+- Manage **customer records**
+- Create and update **repair tickets**
+- Track **device issues and statuses**
+- Provide a modern UI/UX for technicians and admins
+
+Built with the latest web technologies for security, performance, and scalability.
+
+---
+
+## 🧱 Tech Stack
+
+| Technology              | Description                                 |
+| ----------------------- | ------------------------------------------- |
+| 🔗 **Next.js 15**       | App Router-based full-stack React framework |
+| 🔗 **React 19**         | Latest React version for dynamic UIs        |
+| 🔗 **TypeScript**       | Static typing for scalability and safety    |
+| 🎨 **TailwindCSS**      | Utility-first styling framework             |
+| 🧩 **ShadCN/ui**        | Beautiful prebuilt components               |
+| 🔐 **Kinde Auth**       | Authentication & authorization              |
+| 🐇 **Neon Postgres**    | Serverless Postgres database                |
+| 🌱 **Drizzle ORM**      | Type-safe SQL ORM                           |
+| 📄 **react-hook-form**  | Performant form state management            |
+| ✅ **Zod**              | Schema validation for frontend/backend      |
+| 🛡️ **next-safe-action** | Secure async server actions                 |
+| 📊 **TanStack Table**   | Advanced tables for filtering & sorting     |
+| ☁️ **Vercel**           | Hosting & CI/CD                             |
+| 🧰 **Sentry**           | Monitoring and error tracking               |
+
+---
+
+## 🚀 Features
+
+- 🧑‍🔧 Customer management dashboard
+- 🛠️ Repair ticket creation and status tracking
+- 🔐 Role-based access control with Kinde
+- 📃 Data-rich tables with search and filters (TanStack Table)
+- 📊 Analytics-ready & performance monitored with Sentry
+- ✨ Clean and modern UI with ShadCN + TailwindCSS
+
+![Repair Ticket Page](https://placehold.co/1200x600/222/eee?text=Repair+Ticket+Details)
+
+---
+
+## 🔧 Getting Started
+
+### 1. Clone the Repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/MD-MOUAD/computer-repair-shop.git
+cd computer-repair-shop
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a `.env` file:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Database
+DATABASE_URL=your_neon_postgres_url
 
-## Learn More
+# Auth
+KINDE_ISSUER_URL=your_kinde_issuer_url
+KINDE_CLIENT_ID=your_kinde_client_id
+KINDE_CLIENT_SECRET=your_kinde_client_secret
 
-To learn more about Next.js, take a look at the following resources:
+# Sentry
+SENTRY_DSN=your_sentry_dsn
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Start Development Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm dev
+```
 
-## Deploy on Vercel
+Visit `http://localhost:3000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📋 Database & ORM
+
+- Postgres database hosted on **Neon**
+- Drizzle ORM for migrations and type-safe queries
+
+```bash
+pnpm drizzle:push
+```
+
+---
+
+## 🛡️ Auth & Security
+
+- Integrated **Kinde Auth** for user login
+- All actions protected with `next-safe-action`
+- Schema validation with `zod`
+
+---
+
+## ✅ Forms
+
+- Managed using `react-hook-form`
+- Validated via `zod` schemas
+- Fully type-safe and user-friendly
+
+---
+
+## 🚫 Error Monitoring
+
+- Integrated with [Sentry](https://sentry.io)
+- Real-time logging and performance tracking
+
+---
+
+## ☁️ Deployment
+
+This app is fully optimized for **Vercel**.
+
+Just push to `main`, and it's live.
+
+---
+
+## 👨‍💼 Author
+
+Built with ❤️ by [Mouad khanouch](https://github.com/MD-MOUAD)
